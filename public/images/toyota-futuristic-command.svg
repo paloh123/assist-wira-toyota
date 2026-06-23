@@ -1,0 +1,73 @@
+<svg width="1440" height="1080" viewBox="0 0 1440 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1440" height="1080" fill="#020617"/>
+  <defs>
+    <linearGradient id="sky" x1="720" y1="0" x2="720" y2="1080" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#07111f"/>
+      <stop offset="0.52" stop-color="#061223"/>
+      <stop offset="1" stop-color="#020617"/>
+    </linearGradient>
+    <radialGradient id="blueGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(770 695) rotate(90) scale(390 710)">
+      <stop stop-color="#38bdf8" stop-opacity="0.72"/>
+      <stop offset="0.44" stop-color="#2563eb" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#020617" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="headlight" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1012 688) rotate(8.4) scale(330 46)">
+      <stop stop-color="#e0f2fe"/>
+      <stop offset="0.28" stop-color="#38bdf8" stop-opacity="0.7"/>
+      <stop offset="1" stop-color="#38bdf8" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="carBody" x1="278" y1="580" x2="1086" y2="789" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0f172a"/>
+      <stop offset="0.26" stop-color="#172554"/>
+      <stop offset="0.55" stop-color="#0ea5e9"/>
+      <stop offset="0.84" stop-color="#1d4ed8"/>
+      <stop offset="1" stop-color="#020617"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="500" y1="473" x2="907" y2="598" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#dff8ff" stop-opacity="0.82"/>
+      <stop offset="0.38" stop-color="#38bdf8" stop-opacity="0.4"/>
+      <stop offset="1" stop-color="#0f172a" stop-opacity="0.92"/>
+    </linearGradient>
+    <filter id="blurGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="28"/>
+    </filter>
+  </defs>
+  <rect width="1440" height="1080" fill="url(#sky)"/>
+  <path d="M0 733C244 675 431 659 629 690C857 726 1040 709 1440 608V1080H0V733Z" fill="#030712"/>
+  <g opacity="0.42">
+    <path d="M-40 774H1480" stroke="#38bdf8" stroke-opacity="0.23"/>
+    <path d="M76 1080L506 744M309 1080L602 744M547 1080L703 744M780 1080L798 744M1004 1080L895 744M1226 1080L1008 744" stroke="#60a5fa" stroke-opacity="0.18"/>
+  </g>
+  <g opacity="0.5">
+    <rect x="94" y="316" width="88" height="354" fill="#07111f"/>
+    <rect x="212" y="214" width="116" height="456" fill="#0b1426"/>
+    <rect x="365" y="274" width="86" height="396" fill="#07111f"/>
+    <rect x="998" y="253" width="116" height="417" fill="#0b1426"/>
+    <rect x="1152" y="173" width="92" height="497" fill="#07111f"/>
+    <rect x="1272" y="292" width="72" height="378" fill="#0b1426"/>
+    <path d="M115 348H160M115 397H160M115 446H160M232 258H308M232 314H308M232 370H308M232 426H308M1020 295H1094M1020 353H1094M1020 411H1094M1172 223H1224M1172 283H1224M1172 343H1224M1172 403H1224" stroke="#38bdf8" stroke-opacity="0.35"/>
+  </g>
+  <ellipse cx="738" cy="721" rx="704" ry="331" fill="url(#blueGlow)"/>
+  <ellipse cx="944" cy="705" rx="348" ry="55" fill="url(#headlight)" filter="url(#blurGlow)" opacity="0.86"/>
+  <g opacity="0.88">
+    <path d="M246 673C300 590 392 545 522 527L823 486C904 477 985 501 1048 553L1169 654C1195 676 1182 718 1148 722L1057 734L327 727C256 725 217 717 246 673Z" fill="url(#carBody)"/>
+    <path d="M412 555C463 497 531 468 617 468H799C850 468 894 491 925 529L973 590H349L412 555Z" fill="url(#glass)"/>
+    <path d="M607 484L568 590M785 484L827 590" stroke="#020617" stroke-width="13" stroke-linecap="round" opacity="0.82"/>
+    <path d="M267 677C357 671 431 671 489 677C663 696 837 693 1011 668C1070 660 1116 660 1149 668" stroke="#bae6fd" stroke-opacity="0.72" stroke-width="8" stroke-linecap="round"/>
+    <path d="M295 689L437 697M936 657L1088 641" stroke="#e0f2fe" stroke-width="15" stroke-linecap="round"/>
+    <circle cx="446" cy="727" r="82" fill="#020617"/>
+    <circle cx="446" cy="727" r="50" stroke="#94a3b8" stroke-width="12"/>
+    <circle cx="446" cy="727" r="18" fill="#e0f2fe"/>
+    <circle cx="950" cy="727" r="82" fill="#020617"/>
+    <circle cx="950" cy="727" r="50" stroke="#94a3b8" stroke-width="12"/>
+    <circle cx="950" cy="727" r="18" fill="#e0f2fe"/>
+    <path d="M533 650H762M803 640H882" stroke="#7dd3fc" stroke-opacity="0.62" stroke-width="4" stroke-linecap="round"/>
+  </g>
+  <g opacity="0.75">
+    <path d="M244 255H534M226 279H430M996 188H1228M1042 212H1310" stroke="#38bdf8" stroke-opacity="0.42" stroke-width="2"/>
+    <circle cx="542" cy="255" r="5" fill="#38bdf8"/>
+    <circle cx="987" cy="188" r="5" fill="#38bdf8"/>
+    <path d="M111 850H331M1108 826H1350" stroke="#60a5fa" stroke-opacity="0.35" stroke-width="2"/>
+  </g>
+  <rect x="0" y="0" width="1440" height="1080" fill="url(#blueGlow)" opacity="0.45"/>
+</svg>

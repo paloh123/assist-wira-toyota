@@ -1,0 +1,122 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model PendingWO {
+  id             Int       @id @default(autoincrement())
+  outlet_code    String
+  wo_no          String
+  wo_date        DateTime
+  chassis_no     String?
+  operation_desc String?
+  operation_type String?
+  labor_code     String?
+  labor_amount   Float?
+  part_amount    Float?
+  oil_amount     Float?
+  tyre_amount    Float?
+  discount       Float?
+  other_amount   Float?
+  raw_col13      String?
+  raw_col14      String?
+  remark         String?
+  status         String    @default("PENDING")
+  upload_date    DateTime?
+  created_at     DateTime  @default(now())
+  updated_at     DateTime  @updatedAt
+
+  @@unique([wo_no, outlet_code, wo_date])
+  @@index([status])
+  @@index([outlet_code])
+  @@index([upload_date])
+  @@map("pending_wo")
+}
+
+model PendingINV {
+  id          Int       @id @default(autoincrement())
+  outlet_code String
+  wo_no       String
+  invoice_no  String
+  date        DateTime
+  part_no     String
+  part_desc   String?
+  unit_price  Float?
+  qty         Int?
+  amount      Float?
+  discount    Float?
+  ppn         Float?
+  total       Float?
+  po_no       String?
+  raw_col_a   String?
+  raw_col_b   String?
+  status      String    @default("PENDING")
+  upload_date DateTime?
+  created_at  DateTime  @default(now())
+  updated_at  DateTime  @updatedAt
+
+  @@unique([invoice_no, wo_no, part_no])
+  @@index([status])
+  @@index([outlet_code])
+  @@index([upload_date])
+  @@map("pending_inv")
+}
+
+model UploadHistory {
+  id          Int      @id @default(autoincrement())
+  file_name   String
+  file_type   String
+  total_data  Int
+  skipped     Int      @default(0)
+  duplicates  Int      @default(0)
+  upload_date DateTime
+  user        String
+  created_at  DateTime @default(now())
+
+  @@map("upload_history")
+}
+
+model Settings {
+  id           Int      @id @default(1)
+  month        String   @default("")
+  ratio        Float    @default(1.1)
+  target_tam   Int      @default(0)
+  hk           Int      @default(0)
+  plan_per_day Int      @default(0)
+  updated_at   DateTime @updatedAt
+
+  @@map("settings")
+}
+
+model DailyPlan {
+  id          Int      @id @default(autoincrement())
+  plan_date   DateTime @unique
+  plan_count  Int      @default(0)
+  actual_wo   Int      @default(0)
+  actual_inv  Int      @default(0)
+  created_at  DateTime @default(now())
+  updated_at  DateTime @updatedAt
+
+  @@map("daily_plan")
+}
+
+model User {
+  id            Int      @id @default(autoincrement())
+  username      String   @unique
+  name          String
+  password_hash String
+  role          String
+  is_active     Boolean  @default(true)
+  created_at    DateTime @default(now())
+  updated_at    DateTime @updatedAt
+
+  @@index([role])
+  @@map("users")
+}
